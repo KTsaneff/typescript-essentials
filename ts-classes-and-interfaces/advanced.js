@@ -23,7 +23,43 @@ class AdvancedUser {
     get fullName() {
         return this.firstName + ' ' + this.lastName;
     }
+    static eid = 'USER';
+    static greet() {
+        console.log('Hello!');
+    }
 }
+class Employee extends AdvancedUser {
+    jobTitle;
+    constructor(jobTitle) {
+        super();
+        this.jobTitle = jobTitle;
+        //super.firstName = 'NewName';
+    }
+    work() {
+        // ...
+    }
+}
+class UIElement {
+    identifier;
+    constructor(identifier) {
+        this.identifier = identifier;
+    }
+    clone() {
+        // logic to duplicate the UI element
+    }
+}
+//let uiElement = new UIElement();
+class SideDrawer extends UIElement {
+    identifier;
+    position;
+    constructor(identifier, position) {
+        super(identifier);
+        this.identifier = identifier;
+        this.position = position;
+    }
+}
+console.log(AdvancedUser.eid);
+AdvancedUser.greet();
 const advancedMax = new AdvancedUser();
 advancedMax.firstName = 'Max';
 advancedMax.lastName = 'Ribbit';
