@@ -32,4 +32,5 @@ export function removeTodo(id:number) {
 export function updateTodo(id: number, text: string) {
     const todo = getTodo(id);
     todo.text = text;
+    return todo;
 }

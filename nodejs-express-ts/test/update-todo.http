@@ -1,0 +1,8 @@
+PATCH http://localhost:3000/todos/
+
+Content-Type: application/json
+
+{
+    "id": 0.5430763966398413
+    "text": "My updated text!"
+}
